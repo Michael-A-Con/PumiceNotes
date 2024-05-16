@@ -31,6 +31,8 @@ class _NotesPageState extends State<NotesPage> {
           backgroundColor: Theme.of(context).colorScheme.background,
               content: TextField(
                 controller: textController,
+                cursorColor: Theme.of(context).colorScheme.inversePrimary,
+                style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary),
               ),
               actions: [
                 MaterialButton(
@@ -39,7 +41,10 @@ class _NotesPageState extends State<NotesPage> {
                     textController.clear();
                     Navigator.pop(context);
                   },
-                  child: const Text("Create"),
+                  child: Text(
+                    "Create",
+                    style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary),
+                  ),
                 )
               ],
             ));
